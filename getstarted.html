@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="homepage.css" />
+		<link rel="stylesheet" href="animations.css" />
+		<link rel="stylesheet" href="wavesSearch.css" />
+		<link rel="stylesheet" href="layout.css" />
+		<link rel="stylesheet" href="prototype.css" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<title>Movie Search Engine</title>
+	</head>
+	<body>
+		<nav>
+			<section class="logoContainer fade-in">
+				<a href="index.html">
+					<img
+						src="https://raw.githubusercontent.com/LucasPennice/TvShowSearchProject/3a89a42346c7a9597644a85ac28febb1723f28b2/logo.svg"
+						alt="pageLogo"
+						class="logo"
+				/></a>
+			</section>
+			<section class="navMiddleContainer">
+				<div class="hiddenSearchContainer">
+					<input type="text" placeholder="Search Something" class="searchBar" />
+					<button class="searchButton"><i class="fas fa-search"></i></button>
+				</div>
+				<div id="contactDiv">
+					<a href="#" class="navAnchor contact tracking-in-expand-fwd"
+						>Contact <i class="fas fa-angle-double-down"></i
+					></a>
+				</div>
+				<div id="popMenuDiv">
+					<a href="#" class="tracking-in-expand-fwd navAnchor"
+						><i class="fas fa-angle-double-down"></i
+					></a>
+				</div>
+				<div id="homeDiv">
+					<a href="index.html" class="navAnchor tracking-in-expand-fwd">Home</a>
+				</div>
+			</section>
+			<section>
+				<a href="learnMore.html">
+					<button class="learnMore slide-in-blurred-right">Learn More</button>
+				</a>
+			</section>
+		</nav>
+		<div class="popUpMenu inactive">
+			<div>
+				<a
+					href="https://www.linkedin.com/in/lucas-pennice-22a2081b3"
+					target="_blank"
+					id="linkedIn"
+					>LinkedIn <span><i class="fab fa-linkedin icono"></i></span
+				></a>
+			</div>
+			<div>
+				<a href="https:www.github.com/LucasPennice" target="_blank" id="gitHub"
+					>GitHub <span><i class="fab fa-github icono"></i></span
+				></a>
+			</div>
+			<div>
+				<a href="#" target="_blank" id="email"
+					>lucaspennice@gmail.com
+					<span><i class="fab fa-google icono"></i></span
+				></a>
+			</div>
+		</div>
+
+		<div class="custom-shape-divider-top-1632789334 slide-bottom">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill"
+					id="top"
+				></path>
+			</svg>
+		</div>
+		<section class="searchResults slide-in-blurred-left">
+			<div>
+				<span class="slide-in-blurred-left searchingInputCopy"
+					>Look up a show...</span
+				>
+				<span class="writing writingInactive">_</span>
+			</div>
+			<div class="loadingCards">
+				<span class="loadingIcon writingInactive"
+					><i class="fas fa-adjust"></i
+				></span>
+			</div>
+		</section>
+
+		<!-- When Clicking On result Starting -->
+
+		<div class="inactive inactiveOpacity searchResultsCurrent">
+			<a href="#" class="closeCurrentResult"><i class="fas fa-close"></i></a>
+			<div class="currentResultContainer">
+				<div>
+					<img
+						src="https://it.gilson.com/pub/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/F/1/F172200_MAIN_Diamond-Blister-DL10-960-tips_11.jpg"
+						alt=""
+						class="currentResultImage"
+					/>
+				</div>
+				<div class="currentResultTextContainer">
+					<div class="currentTitle">Title</div>
+					<div>
+						<span class="textConfig">Status:</span>
+						<span class="showStatus">xd</span>
+					</div>
+					<div id="summary">
+						<span class="textConfig">Summary:</span
+						><span class="showSummary">xd</span>
+					</div>
+					<div>
+						<span class="textConfig">Genres:</span>
+						<span class="showGenres">xd</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- When Clicking On result End -->
+
+		<footer>
+			<div class="custom-shape-divider-bottom-1632789981 slide-in-bottom">
+				<svg
+					data-name="Layer 1"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 1200 120"
+					preserveAspectRatio="none"
+				>
+					<path
+						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+						class="shape-fill"
+						id="bottom"
+					></path>
+				</svg>
+			</div>
+
+			<section class="footerUpperSection">
+				<div class="logoContainer">
+					<a href="index.html"
+						><img
+							src="https://raw.githubusercontent.com/LucasPennice/TvShowSearchProject/3a89a42346c7a9597644a85ac28febb1723f28b2/logo.svg"
+							alt="pageLogo"
+							class="logo fade-in"
+						/>
+					</a>
+				</div>
+				<div class="footerAnchorsContainer">
+					<div><a href="#" class="footerAnchors">Privacy</a></div>
+					<div><a href="#" class="footerAnchors">Terms</a></div>
+				</div>
+			</section>
+			<section class="footerLowerSection">2021 Privacy magic whaetevs</section>
+		</footer>
+		<script src="mainpage&layout.js"></script>
+		<script src="searchbar.js"></script>
+	</body>
+</html>

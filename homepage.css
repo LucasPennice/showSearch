@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	z-index: 1;
+	background-color: #3b3b3b;
+	height: 16rem;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 200;
+	letter-spacing: 2px;
+}
+
+.hero > div:nth-of-type(1) {
+	cursor: default;
+	font-size: 3rem;
+	letter-spacing: -2px;
+	text-shadow: 0 0 5px rgb(42, 42, 42);
+}
+
+.hero > div:nth-of-type(2) {
+	font-size: 1.7rem;
+	cursor: default;
+	letter-spacing: -1px;
+	color: rgba(255, 255, 255, 0.246);
+	text-shadow: 0 0 5px rgba(42, 42, 42, 0.376);
+}
+
+.getStartedDiv {
+	margin: 0 auto;
+	height: fit-content;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	display: block;
+	z-index: 5;
+}
+.getStartedForm {
+	border-radius: 30px;
+	background-color: transparent;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.getStartedForm:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 12px black;
+}
+
+.getStartedButton {
+	font-family: 'Roboto Slab', serif;
+	background-color: rgb(114, 48, 213);
+	color: white;
+	box-shadow: 0 0 5px black;
+	border-style: none;
+	font-size: 3rem;
+	padding: 4rem 6rem 4rem 6rem;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	.getStartedDiv {
+		height: 35vh;
+		display: flex;
+		align-items: center;
+	}
+	.getStartedButton {
+		font-size: 7vw;
+		padding: 9vw 18vw;
+	}
+	.custom-shape-divider-bottom-1632789981 svg,
+	.custom-shape-divider-top-1632789334 svg {
+		height: 70px;
+	}
+	.hero {
+		height: 9rem;
+	}
+	.hero > div:nth-of-type(1) {
+		font-size: 7vw;
+	}
+
+	.hero > div:nth-of-type(2) {
+		font-size: 4vw;
+	}
+	.getStartedForm:hover {
+		transform: scale(1);
+		box-shadow: 0 0 12px rgba(0, 0, 0, 0);
+	}
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+	.hero {
+		height: 40vh;
+		padding-bottom: 2rem;
+	}
+	.hero > div:nth-of-type(1) {
+		font-size: 8vh;
+	}
+	.hero > div:nth-of-type(2) {
+		font-size: 6vh;
+	}
+}
