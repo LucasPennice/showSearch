@@ -1,1 +1,1 @@
-# showSearch
+This was the first big project that I made, I remember stepping into so many challenges when I wrote it. Some that come to mind are: how to use an API and asynchronous functions (this was my very first project to interact with any kind of API), how to keep an organized code, how to take a large chunk of data and make it into HTML code. Overall this was one of the most enjoyable personal projects that I've worked on, mainly because I had to learn so much and overcome many problems. Note: link here the refactored project made in React
